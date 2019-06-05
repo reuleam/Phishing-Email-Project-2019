@@ -1,25 +1,26 @@
 import scrapy
+import re
 
 
 def get_start_urls():
 	result = []
 	with open('lvl_1_urls.txt', 'r') as url_file:
 		for url in url_file:
-			result.append('http://www.millersmiles.co.uk' + url[:-1])
+			result.append(url[:-1])
 	return result
 
 
 class Level2Spider(scrapy.Spider):
 	name = 'lvl_2_spider'
 	start_urls = get_start_urls()
-	end_urls = set()
+	end_subjects = set()
 
 	def parse(self, response):
-		for url in response.xpath('//p/a/@href').getall():
-			self.end_urls.add(url.strip())
+		response = response.replace(body=response.body.replace(b'<br>', b' '))
+		for subject in response.xpath('//b/a/text()').getall():
+			self.end_subjects.add(subject.strip())
 
 	def closed(self, reason):
-		print(self.end_urls)
-		with open('lvl_2_urls.txt', 'w') as url_file:
-			for url in sorted(self.end_urls):
-				url_file.write((url + '\n').encode('utf-8'))
+		with open('lvl_2_subjects.txt', 'w') as subject_file:
+			for subject in sorted(self.end_subjects):
+				subject_file.write((subject + '\n').encode('utf-8'))

@@ -4,7 +4,7 @@ import scrapy
 class Level1Spider(scrapy.Spider):
 	name = 'lvl_1_spider'
 	start_urls = [
-		'http://www.millersmiles.co.uk/scams.php',
+		'http://www.millersmiles.co.uk/archives/current',
 	]
 	end_urls = set()
 
