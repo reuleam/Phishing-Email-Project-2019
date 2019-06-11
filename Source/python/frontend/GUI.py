@@ -4,7 +4,7 @@ from tkinter import *
 root = Tk() # Creates a blank window with name root
 
 root.minsize(width = 1000, height = 500)    # Minimum size of window
-
+root.configure(background="purple")           # Can change background color to whatever we want
 ########################################################################################################################
 #                                               FUNCTION DEFINITIONS START                                             #
 ########################################################################################################################
@@ -24,12 +24,12 @@ def main():
 
     # Main Screen with a choice between a reference list or the email checker
     check_email = Button(root, text="Checker", fg = "green", command=lambda: email_checker(check_email, references))
-    check_email.config(height=10, width=30)
-    check_email.grid(row=0, column=0, padx=100, pady=200)
+    check_email.config(height = 3, width = 14, background = 'black', font=("Times New Roman", 36))
+    check_email.grid(row = 0, column=0, padx=100, pady=200)
 
 
     references = Button(root, text="References", fg = "blue", command= lambda:reference_checker(check_email, references))
-    references.config(height=10, width = 30)
+    references.config(height=3, width = 14, background = 'black', font=("Times New Roman", 36))
     references.grid(row = 0, column = 1, padx=100, pady=200)
 
 # Function definition that runs backend code after entering user input when user left clicks "Run" button (EVENT)
@@ -64,9 +64,11 @@ def checker():
     # Creates a label object with parameter 1 setting where to put and 2nd parameter being what
     # you want it to say
 
-    subject = Label(root, text="Subject")
+    subject = Label(root, text="Subject", fg = "white")
+    subject.config(background = "purple", font=("Times New Roman", 22))
 
-    body = Label(root, text="Body")
+    body = Label(root, text="Body", fg = "white")
+    body.config(background = "purple",font=("Times New Roman", 22))
     subject_entry = Text(root, height=2, width=80)
     body_entry = Text(root, height=20, width=80)
 
@@ -78,17 +80,17 @@ def checker():
 
     # Creates a button for the run function
     runButton = Button(text="Run", fg="green", command=lambda: run(subject_entry, body_entry))  # Parameters: what you want it to say, color
-    runButton.config(height=5, width=20)    # Adjusts size of button
+    runButton.config(height=2, width=10, background = 'black', font=("Times New Roman", 18))    # Adjusts size of button
 
     # Creates a button for any exit feature
     exitButton = Button(text="Exit", fg="red", command=lambda: exit(root))  # Want both to be on bottom of GUI
-    exitButton.config(height=5, width=20)   # Adjusts size of button
+    exitButton.config(height=2, width=10, background = 'black', font=("Times New Roman", 18))   # Adjusts size of button
 
     runButton.grid(row=15, column=1)        # Centered at bottom of screen
     exitButton.grid(row=15, column=2)       # Bottom right of screen
 
     main_screen = Button(text="Main Menu", fg="blue", command=lambda: main_menu(subject,subject_entry,body,body_entry,runButton,exitButton,main_screen))
-    main_screen.config(height=5, width=20)  # Adjusts size of button
+    main_screen.config(height=2, width=10, background = 'black', font=("Times New Roman", 18))  # Adjusts size of button
     main_screen.grid(row=15,column=0)       # Want this button on far left of screen
 
 
