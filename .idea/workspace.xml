@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fb65f4b-46f8-488c-8758-b34628e442b5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/PhishingSubjectLines.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjectLines.txt" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1252399417">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="CSV" value="4" />
+          <entry key="cfg" value="2" />
+          <entry key="mbox" value="5" />
+          <entry key="py" value="12" />
+          <entry key="txt" value="16" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="PLAIN_TEXT" value="27" />
+          <entry key="Python" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1254" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1254" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/email_extractor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="612">
+              <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+              <folding>
+                <marker date="1562108280524" expanded="true" signature="912:1040" ph="..." />
+                <marker date="1562108280524" expanded="true" signature="1386:1391" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/python/backend/url_classification/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Subject</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjectLines.txt" />
+        <option value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjects.txt" />
+        <option value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/email_extractor.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="1030" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
+              <item name="MillerSmilesScamsCrawler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="backend" type="462c0819:PsiDirectoryNode" />
+              <item name="url_classification" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
+              <item name="Source" type="462c0819:PsiDirectoryNode" />
+              <item name="python" type="462c0819:PsiDirectoryNode" />
+              <item name="frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\brayd\Documents\GitHub\Phishing-Email-Project-2019\Source\python\backend\SubjectLineClassification" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brayd\Documents\GitHub\Phishing-Email-Project-2019\Source\python\backend\SubjectLineClassification" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.GUI">
+    <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Phishing-Email-Project-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Source/python/frontend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Source/python/frontend/GUI.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="email_extractor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Phishing-Email-Project-2019" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/email_extractor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.email_extractor" />
+      <item itemvalue="Python.GUI" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.GUI" />
+        <item itemvalue="Python.email_extractor" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fb65f4b-46f8-488c-8758-b34628e442b5" name="Default Changelist" comment="" />
+      <created>1559859093768</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559859093768</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24983476" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/PhishingSubjectLines.txt" />
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Inbox.mbox">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20543">
+          <caret line="272" column="20" selection-start-line="272" selection-start-column="20" selection-end-line="272" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/encodings/cp1252.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-591957063/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="352" column="62" selection-start-line="352" selection-start-column="56" selection-end-line="352" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/classes.CSV">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/crawler/MillerSmilesScamsCrawler/MillerSmilesScamsCrawler/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Sent.mbox">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-5967" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Archived.mbox">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-103906">
+          <caret line="12308" column="72" lean-forward="true" selection-start-line="12308" selection-start-column="72" selection-end-line="12308" selection-end-column="72" />
+          <caret line="12307" column="72" lean-forward="true" selection-start-line="12307" selection-start-column="72" selection-end-line="12307" selection-end-column="72" />
+          <caret line="12306" column="72" lean-forward="true" selection-start-line="12306" selection-start-column="72" selection-end-line="12306" selection-end-column="72" />
+          <caret line="12305" column="72" lean-forward="true" selection-start-line="12305" selection-start-column="72" selection-end-line="12305" selection-end-column="72" />
+          <caret line="12304" column="72" lean-forward="true" selection-start-line="12304" selection-start-column="72" selection-end-line="12304" selection-end-column="72" />
+          <caret line="12303" column="72" lean-forward="true" selection-start-line="12303" selection-start-column="72" selection-end-line="12303" selection-end-column="72" />
+          <caret line="12302" column="72" lean-forward="true" selection-start-line="12302" selection-start-column="72" selection-end-line="12302" selection-end-column="72" />
+          <caret line="12301" column="72" lean-forward="true" selection-start-line="12301" selection-start-column="72" selection-end-line="12301" selection-end-column="72" />
+          <caret line="12300" column="72" lean-forward="true" selection-start-line="12300" selection-start-column="72" selection-end-line="12300" selection-end-column="72" />
+          <caret line="12299" column="72" lean-forward="true" selection-start-line="12299" selection-start-column="72" selection-end-line="12299" selection-end-column="72" />
+          <caret line="12298" column="72" lean-forward="true" selection-start-line="12298" selection-start-column="72" selection-end-line="12298" selection-end-column="72" />
+          <caret line="12297" column="72" lean-forward="true" selection-start-line="12297" selection-start-column="72" selection-end-line="12297" selection-end-column="72" />
+          <caret line="12296" column="72" lean-forward="true" selection-start-line="12296" selection-start-column="72" selection-end-line="12296" selection-end-column="72" />
+          <caret line="12295" column="72" lean-forward="true" selection-start-line="12295" selection-start-column="72" selection-end-line="12295" selection-end-column="72" />
+          <caret line="12294" column="72" lean-forward="true" selection-start-line="12294" selection-start-column="72" selection-end-line="12294" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/crawler/MillerSmilesScamsCrawler/scrapy.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SubjectLineClassification.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjects_Backup.txt" />
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjects.txt" />
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/deleted.CSV">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/inbox.CSV">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SafeSubjectLines.txt" />
+    <entry file="file://$PROJECT_DIR$/Source/crawler/MillerSmilesScamsCrawler/lvl_2_subjects.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="321" selection-start-line="321" selection-end-line="321" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/test_subjects.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-863">
+          <caret line="1598" lean-forward="true" selection-start-line="1598" selection-end-line="1598" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/email_extractor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+          <folding>
+            <marker date="1562108280524" expanded="true" signature="912:1040" ph="..." />
+            <marker date="1562108280524" expanded="true" signature="1386:1391" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/url_classification/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
