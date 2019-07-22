@@ -15,7 +15,7 @@ def text_extract(input_file, old_file, new_file):
             f.write(subject)
 
 
-def csv_extract(input_file,old_file, new_file):
+def csv_extract(input_file, old_file, new_file):
     with open(input_file) as f:
         reader = csv.reader(f)
         my_new_info = [line[0] for line in reader if 'Subject' not in line]
