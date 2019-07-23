@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fb65f4b-46f8-488c-8758-b34628e442b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Phishing-Email-Project-2019.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Phishing-Email-Project-2019.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/brayd.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/brayd.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/python/backend/Detector/body_threat_words.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/python/backend/Detector/subject_threat_words.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Archived.mbox" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Inbox.mbox" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/classes.CSV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/deleted.CSV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/OUTLOOK/inbox.CSV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/Sent.mbox" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SubjectLineClassification.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/SubjectLineClassification.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/email_extractor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/test_subjects.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +23,8 @@
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,29 +33,29 @@
           <entry key="cfg" value="2" />
           <entry key="json" value="4" />
           <entry key="mbox" value="6" />
-          <entry key="py" value="46" />
-          <entry key="txt" value="27" />
+          <entry key="py" value="48" />
+          <entry key="txt" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PLAIN_TEXT" value="41" />
-          <entry key="Python" value="46" />
+          <entry key="PLAIN_TEXT" value="44" />
+          <entry key="Python" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="149" />
           <entry key="dummy" value="12" />
-          <entry key="py" value="3271" />
+          <entry key="py" value="3328" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="16" />
-          <entry key="Python" value="3420" />
+          <entry key="Python" value="3477" />
         </counts>
       </usages-collector>
     </session>
@@ -80,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_classifier.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -92,13 +83,27 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/phish_body_extractor.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state relative-caret-position="102">
+              <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+              <folding>
+                <marker date="1563919528850" expanded="true" signature="16:21" ph="..." />
+                <marker date="1563919528850" expanded="true" signature="16:26" ph="..." />
+              </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/body_threat_words.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/subject_threat_words.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -133,6 +138,8 @@
         <option value="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_extractor.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/phish_body_extractor.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_classifier.py" />
+        <option value="$PROJECT_DIR$/Source/python/backend/PhishDetector.py" />
+        <option value="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" />
       </list>
     </option>
   </component>
@@ -161,7 +168,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,23 +212,7 @@
               <item name="Source" type="462c0819:PsiDirectoryNode" />
               <item name="python" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="EmailBodyClassification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="SubjectLineClassification" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Phishing-Email-Project-2019" type="462c0819:PsiDirectoryNode" />
-              <item name="Source" type="462c0819:PsiDirectoryNode" />
-              <item name="python" type="462c0819:PsiDirectoryNode" />
-              <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="url_classification" type="462c0819:PsiDirectoryNode" />
+              <item name="Detector" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Phishing-Email-Project-2019" type="b2602c69:ProjectViewProjectNode" />
@@ -239,6 +229,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -269,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.body_classifier">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Phishing-Email-Project-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -384,11 +375,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.body_classifier" />
         <item itemvalue="Python.phish_body_extractor" />
         <item itemvalue="Python.body_extractor" />
         <item itemvalue="Python.SubjectLineClassification" />
-        <item itemvalue="Python.GUI" />
       </list>
     </recent_temporary>
   </component>
@@ -407,13 +398,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18968935" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32885906" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43087247" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,13 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
         </state>
       </provider>
     </entry>
@@ -689,6 +674,13 @@
         <state relative-caret-position="-255" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/phishBodies.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1768">
+          <caret column="1126" selection-start-column="1126" selection-end-column="1126" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -696,12 +688,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/phishBodies.txt">
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_threat_words.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1768">
-          <caret column="1126" selection-start-column="1126" selection-end-column="1126" />
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/body_threat_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/phish_body_extractor.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -710,17 +720,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_threat_words.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11501" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/subject_threat_words.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_classifier.py">
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        <state relative-caret-position="102">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1563919528850" expanded="true" signature="16:21" ph="..." />
+            <marker date="1563919528850" expanded="true" signature="16:26" ph="..." />
           </folding>
         </state>
       </provider>
