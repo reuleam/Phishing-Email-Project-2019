@@ -4,4 +4,4 @@ Instructions:
 2. On command prompt, run the following in order:
 	+ scrapy crawl lvl_1_spider
 	+ scrapy crawl lvl_2_spider
-3. Result subjects are saved in lvl_2_subjects.txt
+3. Result emails are saved in phishing_emails.json.

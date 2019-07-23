@@ -1,5 +1,6 @@
 import scrapy
 import re
+import json
 
 
 def get_start_urls():
@@ -13,14 +14,15 @@ def get_start_urls():
 class Level2Spider(scrapy.Spider):
 	name = 'lvl_2_spider'
 	start_urls = get_start_urls()
-	end_subjects = set()
+	end_emails = {'phishing_emails':[]}
 
 	def parse(self, response):
 		response = response.replace(body=response.body.replace(b'<br>', b' '))
-		for subject in response.xpath('//b/a/text()').getall():
-			self.end_subjects.add(subject.strip())
+		subjects = response.xpath('//b/a/text()').getall()
+		bodies = response.xpath('//blockquote/p/font/text()').getall()
+		for subject, body in zip(subjects, bodies):
+			self.end_emails['phishing_emails'].append({'subject':subject, 'body':body})
 
 	def closed(self, reason):
-		with open('lvl_2_subjects.txt', 'w') as subject_file:
-			for subject in sorted(self.end_subjects):
-				subject_file.write((subject + '\n').encode('utf-8'))
+		with open('phishing_emails.json', 'w') as email_file:
+			json.dump(self.end_emails, email_file)
