@@ -1,6 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing Detector</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 <body>
-    <form method="POST" target="_self">
-        <textarea name="text"></textarea>
-        <input type="submit">
-    </form>
+    <div class="phish">
+        <form class="form validate-form" method="POST">
+            <div class="warp-input validate-input" data-validate="Subject is required">
+                <input class="input" type="text" name="subject" placeholder="Subject">
+            </div>
+            <div class="wrap-input validate-input" data-validate="Body is required">
+                <textarea class="input" name="body" palceholder="Body"></textarea>
+            </div>
+            <div class="container-btn">
+                <button class="btn">
+                    <span>
+                        Submit
+                    </span>
+                </button>
+            </div>
+        </form> 
+    </div>
 </body>
+
+
+</html>
