@@ -1,8 +1,11 @@
 import nltk
-
+import os
 
 class ThreatDetector:
-    def __init__(self, subject_threat_words_filename, body_threat_words_filename):
+    def __init__(self, subject_threat_words_filename='subject_threat_words.txt', body_threat_words_filename='body_threat_words.txt'):
+        dirname = os.path.dirname(__file__)
+        subject_threat_words_filename = os.path.join(dirname, subject_threat_words_filename)
+        body_threat_words_filename = os.path.join(dirname, body_threat_words_filename)
         self.body_threats = []
         self.subject_threats = []
         with open(body_threat_words_filename, 'r') as f:
