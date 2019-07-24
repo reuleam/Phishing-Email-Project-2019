@@ -1,5 +1,9 @@
 # Imports everything from tkinter for GUI
 from tkinter import *
+from flask import Flask
+
+app = Flask(__name__)
+
 
 root = Tk() # Creates a blank window with name root
 
@@ -15,7 +19,7 @@ frame.config(background='grey')
 ########################################################################################################################
 #                                               FUNCTION DEFINITIONS START                                             #
 ########################################################################################################################
-
+@app.route("/")
 def main():
 
     # DROP DOWN MENUS
@@ -39,7 +43,7 @@ def main():
     # Main Screen with a choice between a reference list or the email checker
     title = Label(frame, text="Phishing Detector", fg="white", anchor=CENTER)
     title.config(background="grey", font=("Times New Roman", 22))
-    title.grid(row=10, column=0, columnspan=10, sticky=N, padx=10)
+    title.grid(row=0, column=0, columnspan=10, sticky=N)
 
     check_email = Button(frame, text="Checker", fg = "white", command=lambda: email_checker(frame), borderwidth=0)
     check_email.config(height=1, width=7, background = 'grey', font=("Times New Roman", 12))
@@ -146,6 +150,9 @@ def exit(root):
 ########################################################################################################################
 
 # Calls the main function
-main()
-
-root.mainloop()     # Loops GUI to stay open
+#main()
+if __name__ == "__main__":
+    app.run()
+    main()
+    root.mainloop()
+#root.mainloop()     # Loops GUI to stay open
