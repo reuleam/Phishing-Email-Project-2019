@@ -3,26 +3,37 @@
 <head>
     <title>Phishing Detector</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
     <div class="phish">
-        <form class="form validate-form" method="POST">
-            <div class="warp-input validate-input" data-validate="Subject is required">
-                <input class="input" type="text" name="subject" placeholder="Subject">
-            </div>
-            <div class="wrap-input validate-input" data-validate="Body is required">
-                <textarea class="input" name="body" palceholder="Body"></textarea>
-            </div>
-            <div class="container-btn">
-                <button class="btn">
-                    <span>
-                        Submit
-                    </span>
-                </button>
-            </div>
-        </form> 
+        <div class="container-phish">
+            <form class="phish-form validate-form" method="POST">
+                <span class="phish-form-title">
+                Phishing Email Detector
+                </span>
+                <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                    <input class="input1" type="text" name="subject" placeholder="Subject">
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="wrap-input1 validate-input" data-validate="Body is required">
+                    <textarea class="input1" name="body" placeholder="Body"></textarea>
+                    <span class="shadow-input1"></span>
+                </div>
+
+                <div class="container-btn">
+                    <button class="btn">
+                        <span>
+                            Submit
+                        </span>
+                    </button>
+                </div>
+
+            </form> 
+        </div>
     </div>
+
 </body>
 
 
