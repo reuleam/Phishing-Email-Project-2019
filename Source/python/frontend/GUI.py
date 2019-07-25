@@ -76,7 +76,7 @@ class GUI:
         self.clear()
 
         subject_label = Label(self.root, text="Subject Threats", fg="black")
-        subject_label.config(background="red", font=("Times New Roman", 16))
+        subject_label.config(background="gray", font=("Times New Roman", 16))
         subject_label.grid(row=0, column=0, padx=35, sticky='w', columnspan=2)
 
         sub_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)
@@ -84,7 +84,7 @@ class GUI:
         sub_res.grid(row=1, column=0, columnspan=5)
 
         body_label = Label(self.root, text="Body Threats", fg="black")
-        body_label.config(background="red", font=("Times New Roman", 16))
+        body_label.config(background="gray", font=("Times New Roman", 16))
         body_label.grid(row=2, column=0, padx=35, sticky='w', columnspan=2)
 
         bod_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)

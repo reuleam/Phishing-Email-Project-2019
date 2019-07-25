@@ -1,8 +1,22 @@
 import nltk
 import os
+import scipy.stats as st
 
 class ThreatDetector:
     def __init__(self, subject_threat_words_filename='subject_threat_words.txt', body_threat_words_filename='body_threat_words.txt'):
+        self.p_avg_subject_threats_per_word = 0.39198340154041067
+        self.p_stddev_subject_threats_per_word = 0.2301476308224313
+        self.s_avg_subject_threats_per_word = 0.041405169117432514
+        self.s_stddev_subject_threats_per_word = 0.09456239042678115
+
+        self.p_avg_body_threats_per_word = 0.10762692505398647
+        self.p_stddev_body_threats_per_word = 0.13055473517793445
+        self.s_avg_body_threats_per_word = 0.005167319794593551
+        self.s_stddev_body_threats_per_word = 0.038670845208877064
+
+        self.subject_threats_per_word = None
+        self.body_threats_per_word = None
+
         dirname = os.path.dirname(__file__)
         subject_threat_words_filename = os.path.join(dirname, subject_threat_words_filename)
         body_threat_words_filename = os.path.join(dirname, body_threat_words_filename)
@@ -15,14 +29,31 @@ class ThreatDetector:
 
     def detect_subject(self, subject_string):
         subject_words = nltk.word_tokenize(subject_string)
-        self.subject_threats = [word for word in subject_words if word in self.subject_threat_words]
+        self.subject_threats = [word for word in subject_words if word in self.subject_threat_words
+                                or word.lower() in self.subject_threat_words]
+        if len(subject_words) == 0:
+            self.subject_threats_per_word = 0
+        else:
+            self.subject_threats_per_word = len(self.subject_threats) / len(subject_words)
 
     def detect_body(self, body_string):
         body_words = nltk.word_tokenize(body_string)
-        self.body_threats = [word for word in body_words if word in self.body_threat_words]
+        self.body_threats = [word for word in body_words if word in self.body_threat_words
+                             or word.lower() in self.body_threat_words]
+        if len(body_words) == 0:
+            self.body_threats_per_word = 0
+        else:
+            self.body_threats_per_word = len(self.body_threats) / len(body_words)
 
     def return_threats(self):
         return self.subject_threats, self.body_threats
+
+    def return_stats(self):
+        z_score_subject = (self.subject_threats_per_word - self.p_avg_subject_threats_per_word) / self.p_stddev_subject_threats_per_word
+        z_score_body = (self.body_threats_per_word - self.p_avg_body_threats_per_word) / self.p_stddev_body_threats_per_word
+        subject_percent = st.norm.cdf(z_score_subject)
+        body_percent = st.norm.cdf(z_score_body)
+        return subject_percent, body_percent
 
 def main():
     sub_file = 'subject_threat_words.txt'
