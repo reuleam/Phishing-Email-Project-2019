@@ -138,13 +138,13 @@ class GUI:
     def display_detections(self, subject_threats, body_threats, subject_chance, body_chance):
         self.clear()
 
-        subject_label = Label(self.root, text="Subject Threat Rating: " + str(round(subject_chance*100, 1)), fg="white")
+        subject_label = Label(self.root, text="Subject Threat Rating: " + str(round(subject_chance*100, 1)) + "%", fg="white")
         subject_label.config(background="gray", font=("Times New Roman", 28, 'bold'))
 
         sub_res = Text(self.root, fg="black", wrap=WORD)
         sub_res.config(background="snow2", font=("Times New Roman", 16))
 
-        body_label = Label(self.root, text="Body Threat Rating: " + str(round(body_chance*100, 1)), fg="white")
+        body_label = Label(self.root, text="Body Threat Rating: " + str(round(body_chance*100, 1)) + "%", fg="white")
         body_label.config(background="gray", font=("Times New Roman", 28, 'bold')) #, borderwidth=2, relief="groove")
 
         bod_res = Text(self.root, fg="black", wrap=WORD)
@@ -168,7 +168,6 @@ class GUI:
 
         scroll_sub = Scrollbar(self.root, orient='vertical', command=sub_res.yview)
         scroll_bod = Scrollbar(self.root, orient='vertical', command=bod_res.yview)
-
 
         # Creates a button for to return to main menu
 
@@ -199,6 +198,13 @@ class GUI:
         # Function that will create a screen filled with reference lists
         self.clear()
         print("Ref List")
+
+        sub_res = Text(self.root, fg="black", wrap=WORD)
+        sub_res.config(background="snow2", font=("Times New Roman", 16))
+
+        sub_res.insert(END, "There were no words in your subject line that we commonly found in phishing scams. "
+                            "This does not guarantee that it is not a phishing email. Please see the \"Resources\" "
+                            "for additional materials to assist in identifying threats")
 
         # Creates a button for any exit feature
         exit_button = Button(self.root, text="Exit", fg="black", command=lambda: exit(self.root))
