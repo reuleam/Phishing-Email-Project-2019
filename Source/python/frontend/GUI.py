@@ -43,23 +43,23 @@ class GUI:
     def main_menu(self):
         self.clear()
         # DROP DOWN MENUS
-        menu = Menu(self.root)
-        self.root.config(menu=menu)
-
-        sub_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="File", menu=sub_menu)
-        sub_menu.add_command(label="Main Menu", command=lambda: self.main_menu())
-        sub_menu.add_command(label="Exit", command=lambda: exit(self.root))
-
-        edit_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="Edit", menu=edit_menu)
-        edit_menu.add_command(label="Copy", command=lambda: self.root.focus_get().event_generate('<<Copy>>'))
-        edit_menu.add_command(label="Cut", command=lambda: self.root.focus_get().event_generate('<<Cut>>'))
-        edit_menu.add_command(label="Paste", command=lambda: self.root.focus_get().event_generate('<<Paste>>'))
-
-        help_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="Help", menu=help_menu)
-        help_menu.add_command(label="References", command=lambda: self.reference_list())
+        # menu = Menu(self.root)
+        # self.root.config(menu=menu)
+        #
+        # sub_menu = Menu(menu, tearoff=False)
+        # menu.add_cascade(label="File", menu=sub_menu)
+        # sub_menu.add_command(label="Main Menu", command=lambda: self.main_menu())
+        # sub_menu.add_command(label="Exit", command=lambda: exit(self.root))
+        #
+        # edit_menu = Menu(menu, tearoff=False)
+        # menu.add_cascade(label="Edit", menu=edit_menu)
+        # edit_menu.add_command(label="Copy", command=lambda: self.root.focus_get().event_generate('<<Copy>>'))
+        # edit_menu.add_command(label="Cut", command=lambda: self.root.focus_get().event_generate('<<Cut>>'))
+        # edit_menu.add_command(label="Paste", command=lambda: self.root.focus_get().event_generate('<<Paste>>'))
+        #
+        # help_menu = Menu(menu, tearoff=False)
+        # menu.add_cascade(label="Help", menu=help_menu)
+        # help_menu.add_command(label="References", command=lambda: self.reference_list())
 
         # Main Screen with a choice between a reference list or the email checker
         title = Label(self.root, text="PhishHook", fg="white")
@@ -91,31 +91,33 @@ class GUI:
         self.clear()
         subject = Label(self.root, text="Subject", fg="white")
         subject.config(background="grey", font=("Times New Roman", 22))
+
         pad = Label(self.root, text="       ", fg="gray")
         pad.config(background="grey", font=("Times New Roman", 22))
 
         body = Label(self.root, text="Body", fg="white")
         body.config(background="grey", font=("Times New Roman", 22))
-        subject_entry = Text(self.root, height=5)
-        body_entry = Text(self.root)
+
+        subject_entry = Text(self.root, height=5, background='snow2')
+        body_entry = Text(self.root, background='snow2')
 
         run_button = Button(self.root, text="Run", fg="white",
                             command=lambda: self.run_detector(subject_entry, body_entry))
-        run_button.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
+        run_button.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
         exit_button = Button(self.root, text="Exit", fg="white",
                              command=lambda: exit(self.root))
-        exit_button.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
+        exit_button.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
         main_screen = Button(self.root, text="Main Menu", fg="white",
                              command=lambda: self.main_menu())
-        main_screen.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
+        main_screen.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
 
         self.weight_grid([5, 10, 3, 0, 0], [0, 10, 10, 10, 0])
 
         pad.grid(row=0, column=4, padx=(0, 20))
         subject.grid(row=0, column=0, padx=(20, 0), sticky=W)  # Sticky places based on compass directions N,E,S,W
         body.grid(row=1, column=0, padx=(20, 0), sticky=W)
-        subject_entry.grid(row=0, pady=(20, 0), padx=(20, 0), column=1, columnspan=3, sticky=N+S+E+W)
-        body_entry.grid(row=1, pady=(0, 20), padx=(20, 0), column=1, columnspan=3, sticky=N+S+E+W)
+        subject_entry.grid(row=0, column=1, pady=(20, 0), padx=(20, 0), columnspan=3, sticky=N+S+E+W)
+        body_entry.grid(row=1, column=1, pady=(0, 20), padx=(20, 0), columnspan=3, sticky=N+S+E+W)
 
         main_screen.grid(row=2, column=1, pady=(0, 20))       # Want this button on far left of screen
         run_button.grid(row=2, column=2, pady=(0, 20))        # Centered at bottom of screen
@@ -136,29 +138,18 @@ class GUI:
     def display_detections(self, subject_threats, body_threats, subject_chance, body_chance):
         self.clear()
 
-        subject_label = Label(self.root, text="Subject Threat Rating:", fg="black")
-        subject_label.config(background="gray", font=("Times New Roman", 16))
-        subject_label.grid(row=0, column=1, sticky='w')
+        subject_label = Label(self.root, text="Subject Threat Rating: " + str(round(subject_chance*100, 1)), fg="white")
+        subject_label.config(background="gray", font=("Times New Roman", 28, 'bold'))
 
-        subject_label = Label(self.root, text=str(round(subject_chance*100, 1)) + '%', fg="black")
-        subject_label.config(background="white", font=("Times New Roman", 16))
-        subject_label.grid(row=0, column=2, padx=0, sticky='w')
+        sub_res = Text(self.root, fg="black", wrap=WORD)
+        sub_res.config(background="snow2", font=("Times New Roman", 16))
 
-        sub_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)
-        sub_res.config(background="white", font=("Times New Roman", 16))
-        sub_res.grid(row=1, column=0, columnspan=5)
+        body_label = Label(self.root, text="Body Threat Rating: " + str(round(body_chance*100, 1)), fg="white")
+        body_label.config(background="gray", font=("Times New Roman", 28, 'bold')) #, borderwidth=2, relief="groove")
 
-        body_label = Label(self.root, text="Body Threat Rating:", fg="black")
-        body_label.config(background="gray", font=("Times New Roman", 16))
-        body_label.grid(row=2, column=1, sticky='w')
+        bod_res = Text(self.root, fg="black", wrap=WORD)
+        bod_res.config(background="snow2", font=("Times New Roman", 16))
 
-        subject_label = Label(self.root, text=str(round(body_chance*100, 1)) + '%', fg="black")
-        subject_label.config(background="white", font=("Times New Roman", 16))
-        subject_label.grid(row=2, column=2, padx=0, sticky='w')
-
-        bod_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)
-        bod_res.config(background="white", font=("Times New Roman", 16))
-        bod_res.grid(row=3, column=0, columnspan=5)
 
         if len(subject_threats) == 0:
             sub_res.insert(END, "There were no words in your subject line that we commonly found in phishing scams. "
@@ -175,26 +166,34 @@ class GUI:
             bod_res.insert(END, "There were one or more words found in your email body that are commonly found in "
                                 "phishing emails:\n\n" + ''.join([word + '\n'for word in body_threats]))
 
-
-
-        # scrollb = tki.Scrollbar(txt_frm, command=self.txt.yview)
-        # scrollb.grid(row=0, column=1, sticky='nsew')
-        # self.txt['yscrollcommand'] = scrollb.set
+        scroll_sub = Scrollbar(self.root, orient='vertical', command=sub_res.yview)
+        scroll_bod = Scrollbar(self.root, orient='vertical', command=bod_res.yview)
 
 
         # Creates a button for to return to main menu
-        main_screen = Button(self.root, text="Main Menu", fg="black", command=lambda: self.main_menu())
-        main_screen.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-        main_screen.grid(row=4, column=1, padx=10, pady=10)       # Want this button on far left of screen
 
-        references = Button(self.root, text="References", fg="black", command=lambda: self.reference_list())
+        main_screen = Button(self.root, text="Main Menu", fg="white", command=lambda: self.main_menu())
+        main_screen.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
+
+        references = Button(self.root, text="References", fg="white", command=lambda: self.reference_list())
         references.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-        references.grid(row=4, column=2, padx=10, pady=10)
 
         # Creates a button for any exit feature
-        exit_button = Button(self.root, text="Exit", fg="black", command=lambda: exit(self.root))
+        exit_button = Button(self.root, text="Exit", fg="white", command=lambda: exit(self.root))
         exit_button.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-        exit_button.grid(row=4, column=3, padx=10, pady=10)
+
+        self.weight_grid([1, 50, 1, 50, 1], [1, 1, 1, 1, 1])
+
+        # self.txt['yscrollcommand'] = scrollb.set
+        subject_label.grid(row=0, column=0, columnspan=3, padx=(20, 10), pady=(20, 20),  sticky='w')
+        sub_res.grid(row=1, column=1, columnspan=3, padx=(30, 30), sticky=N+E+S+W)
+        scroll_sub.grid(row=1, column=1, sticky='w')
+        body_label.grid(row=2, column=0, columnspan=3, padx=(20, 10), pady=(20, 20), sticky='w')
+        bod_res.grid(row=3, column=1, columnspan=3, padx=(30, 30), sticky=N+E+S+W)
+        scroll_bod.grid(row=3, column=1, sticky='w')
+        main_screen.grid(row=4, column=1, padx=20, pady=20)
+        references.grid(row=4, column=2, padx=20, pady=20)
+        exit_button.grid(row=4, column=3, padx=20, pady=20)
 
     def reference_list(self):
         # Function that will create a screen filled with reference lists

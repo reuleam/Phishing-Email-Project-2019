@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fb65f4b-46f8-488c-8758-b34628e442b5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/python/frontend/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source/python/frontend/GUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,14 +48,14 @@
         <counts>
           <entry key="Python Console" value="149" />
           <entry key="dummy" value="26" />
-          <entry key="py" value="9909" />
+          <entry key="py" value="10298" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="31" />
-          <entry key="Python" value="10058" />
+          <entry key="Python" value="10447" />
         </counts>
       </usages-collector>
     </session>
@@ -82,24 +81,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+            <state relative-caret-position="266">
+              <caret line="168" column="19" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
               <folding>
+                <element signature="e#171#602#0" />
                 <element signature="e#615#785#0" />
                 <element signature="e#848#1474#0" />
+                <element signature="e#1508#3381#0" />
                 <element signature="e#1524#3843#0" />
                 <element signature="e#1524#1598#0" />
                 <element signature="e#3908#4355#0" />
-                <element signature="e#4459#8103#0" />
-                <element signature="e#5838#6157#0" />
-                <element signature="e#5858#6156#0" />
-                <element signature="e#6184#6397#0" />
-                <element signature="e#6204#6344#0" />
-                <element signature="e#6445#6762#0" />
-                <element signature="e#6465#6761#0" />
-                <element signature="e#6789#6997#0" />
-                <element signature="e#6809#6947#0" />
-                <element signature="e#7009#7067#0" />
                 <element signature="e#8143#8836#0" />
                 <element signature="e#8866#8885#0" />
                 <element signature="e#10812#10867#0" />
@@ -151,7 +142,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="85" />
     <option name="y" value="25" />
     <option name="width" value="1750" />
@@ -413,8 +404,8 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.14210178" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974271" visible="true" weight="0.14210178" />
+      <window_info id="Structure" order="1" sideWeight="0.5025729" side_tool="true" weight="0.14210178" />
       <window_info id="Favorites" order="2" sideWeight="0.5007728" side_tool="true" weight="0.18968935" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
@@ -794,24 +785,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
+        <state relative-caret-position="266">
+          <caret line="168" column="19" selection-start-line="168" selection-start-column="19" selection-end-line="168" selection-end-column="19" />
           <folding>
+            <element signature="e#171#602#0" />
             <element signature="e#615#785#0" />
             <element signature="e#848#1474#0" />
+            <element signature="e#1508#3381#0" />
             <element signature="e#1524#3843#0" />
             <element signature="e#1524#1598#0" />
             <element signature="e#3908#4355#0" />
-            <element signature="e#4459#8103#0" />
-            <element signature="e#5838#6157#0" />
-            <element signature="e#5858#6156#0" />
-            <element signature="e#6184#6397#0" />
-            <element signature="e#6204#6344#0" />
-            <element signature="e#6445#6762#0" />
-            <element signature="e#6465#6761#0" />
-            <element signature="e#6789#6997#0" />
-            <element signature="e#6809#6947#0" />
-            <element signature="e#7009#7067#0" />
             <element signature="e#8143#8836#0" />
             <element signature="e#8866#8885#0" />
             <element signature="e#10812#10867#0" />
