@@ -1,5 +1,6 @@
 from tkinter import *
 from Source.python.backend.Detector.PhishDetector import ThreatDetector
+from PIL import ImageTk, Image
 
 
 class GUI:
@@ -14,15 +15,71 @@ class GUI:
         root.configure(background="grey")
         root.geometry("700x540")
 
-        for idx in range(self.max_rows):
-            root.grid_rowconfigure(idx, weight=1)
-            root.grid_columnconfigure(idx, weight=1)
+        self.logo_path = 'python/backend/PhishHook.png'
 
+        self.logo = ImageTk.PhotoImage(Image.open(self.logo_path).resize((300, 300)))
         self.root = root
 
+        self.clear()
+
     def clear(self):
+        self.weight_grid([1, 1, 1, 1, 1], [1, 1, 1, 1, 1])
+
         for obj in self.root.winfo_children():
             obj.destroy()                # Create reference list screen
+
+    def weight_grid(self, row_weights, col_weights):
+        self.root.grid_rowconfigure(0, weight=row_weights[0])
+        self.root.grid_rowconfigure(1, weight=row_weights[1])
+        self.root.grid_rowconfigure(2, weight=row_weights[2])
+        self.root.grid_rowconfigure(3, weight=row_weights[3])
+        self.root.grid_rowconfigure(4, weight=row_weights[4])
+        self.root.grid_columnconfigure(0, weight=col_weights[0])
+        self.root.grid_columnconfigure(1, weight=col_weights[1])
+        self.root.grid_columnconfigure(2, weight=col_weights[2])
+        self.root.grid_columnconfigure(3, weight=col_weights[3])
+        self.root.grid_columnconfigure(4, weight=col_weights[4])
+
+    def main_menu(self):
+        self.clear()
+        # DROP DOWN MENUS
+        menu = Menu(self.root)
+        self.root.config(menu=menu)
+
+        sub_menu = Menu(menu, tearoff=False)
+        menu.add_cascade(label="File", menu=sub_menu)
+        sub_menu.add_command(label="Main Menu", command=lambda: self.main_menu())
+        sub_menu.add_command(label="Exit", command=lambda: exit(self.root))
+
+        edit_menu = Menu(menu, tearoff=False)
+        menu.add_cascade(label="Edit", menu=edit_menu)
+        edit_menu.add_command(label="Copy", command=lambda: self.root.focus_get().event_generate('<<Copy>>'))
+        edit_menu.add_command(label="Cut", command=lambda: self.root.focus_get().event_generate('<<Cut>>'))
+        edit_menu.add_command(label="Paste", command=lambda: self.root.focus_get().event_generate('<<Paste>>'))
+
+        help_menu = Menu(menu, tearoff=False)
+        menu.add_cascade(label="Help", menu=help_menu)
+        help_menu.add_command(label="References", command=lambda: self.reference_list())
+
+        # Main Screen with a choice between a reference list or the email checker
+        title = Label(self.root, text="PhishHook", fg="white")
+        title.config(background="gray", font=("Times New Roman", 64))
+
+        logo = Label(self.root, image=self.logo)
+        logo.config(background="gray")
+
+        check_email = Button(self.root, text="Detector", fg="white", command=lambda: self.detection_page())
+        check_email.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
+
+        references = Button(self.root, text="References", fg="white", command=lambda: self.reference_list())
+        references.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
+
+        self.weight_grid([10, 2, 2, 2, 10], [0, 10, 10, 10, 0])
+
+        title.grid(row=0, column=1, columnspan=3, pady=(30, 0))
+        logo.grid(row=1, column=1, rowspan=3, columnspan=3)
+        check_email.grid(row=4, column=1, pady=20)
+        references.grid(row=4, column=3, pady=20)
 
     def detection_page(self):
         # When called program will open to the layout for checking email contents.
@@ -34,32 +91,35 @@ class GUI:
         self.clear()
         subject = Label(self.root, text="Subject", fg="white")
         subject.config(background="grey", font=("Times New Roman", 22))
+        pad = Label(self.root, text="       ", fg="gray")
+        pad.config(background="grey", font=("Times New Roman", 22))
 
         body = Label(self.root, text="Body", fg="white")
         body.config(background="grey", font=("Times New Roman", 22))
-        subject_entry = Text(self.root, height=2, width=80)
-        body_entry = Text(self.root, height=20, width=80)
-
-        subject.grid(row=0, sticky=E)  # Sticky places based on compass directions N,E,S,W
-        body.grid(row=1, sticky=E)
-
-        subject_entry.grid(row=0, column=1)     # Subject text next to bar
-        body_entry.grid(row=1, column=1)        # Body text next to bar
+        subject_entry = Text(self.root, height=5)
+        body_entry = Text(self.root)
 
         run_button = Button(self.root, text="Run", fg="white",
                             command=lambda: self.run_detector(subject_entry, body_entry))
-        run_button.config(height=2, width=8, background='grey', font=("Times New Roman", 12))
+        run_button.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
+        exit_button = Button(self.root, text="Exit", fg="white",
+                             command=lambda: exit(self.root))
+        exit_button.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
+        main_screen = Button(self.root, text="Main Menu", fg="white",
+                             command=lambda: self.main_menu())
+        main_screen.config(height=3, width=12, background='grey', font=("Times New Roman", 12))
 
-        # Creates a button for any exit feature
-        exit_button = Button(self.root, text="Exit", fg="white", command=lambda: exit(self.root))
-        exit_button.config(height=2, width=8, background='grey', font=("Times New Roman", 12))
+        self.weight_grid([5, 10, 3, 0, 0], [0, 10, 10, 10, 0])
 
-        run_button.grid(row=2, column=1, pady=10)        # Centered at bottom of screen
-        exit_button.grid(row=2, column=2, pady=10)       # Bottom right of screen
+        pad.grid(row=0, column=4, padx=(0, 20))
+        subject.grid(row=0, column=0, padx=(20, 0), sticky=W)  # Sticky places based on compass directions N,E,S,W
+        body.grid(row=1, column=0, padx=(20, 0), sticky=W)
+        subject_entry.grid(row=0, pady=(20, 0), padx=(20, 0), column=1, columnspan=3, sticky=N+S+E+W)
+        body_entry.grid(row=1, pady=(0, 20), padx=(20, 0), column=1, columnspan=3, sticky=N+S+E+W)
 
-        main_screen = Button(self.root, text="Main Menu", fg="white", command=lambda: self.main_menu())
-        main_screen.config(height=2, width=8, background='grey', font=("Times New Roman", 12))  # Adjusts size of button
-        main_screen.grid(row=2, column=0, pady=10)       # Want this button on far left of screen
+        main_screen.grid(row=2, column=1, pady=(0, 20))       # Want this button on far left of screen
+        run_button.grid(row=2, column=2, pady=(0, 20))        # Centered at bottom of screen
+        exit_button.grid(row=2, column=3, pady=(0, 20))       # Bottom right of screen
 
     def run_detector(self, subject_entry, body_entry):
         subject_content = subject_entry.get('1.0', END)
@@ -69,37 +129,46 @@ class GUI:
         detector.detect_subject(subject_content)
         detector.detect_body(body_content)
         subject_threats, body_threats = detector.return_threats()
+        subject_chance, body_chance = detector.return_stats()
 
-        self.display_detections(subject_threats, body_threats)
+        self.display_detections(subject_threats, body_threats, subject_chance, body_chance)
 
-    def display_detections(self, subject_threats, body_threats):
+    def display_detections(self, subject_threats, body_threats, subject_chance, body_chance):
         self.clear()
 
-        subject_label = Label(self.root, text="Subject Threats", fg="black")
+        subject_label = Label(self.root, text="Subject Threat Rating:", fg="black")
         subject_label.config(background="gray", font=("Times New Roman", 16))
-        subject_label.grid(row=0, column=0, padx=35, sticky='w', columnspan=2)
+        subject_label.grid(row=0, column=1, sticky='w')
+
+        subject_label = Label(self.root, text=str(round(subject_chance*100, 1)) + '%', fg="black")
+        subject_label.config(background="white", font=("Times New Roman", 16))
+        subject_label.grid(row=0, column=2, padx=0, sticky='w')
 
         sub_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)
         sub_res.config(background="white", font=("Times New Roman", 16))
         sub_res.grid(row=1, column=0, columnspan=5)
 
-        body_label = Label(self.root, text="Body Threats", fg="black")
+        body_label = Label(self.root, text="Body Threat Rating:", fg="black")
         body_label.config(background="gray", font=("Times New Roman", 16))
-        body_label.grid(row=2, column=0, padx=35, sticky='w', columnspan=2)
+        body_label.grid(row=2, column=1, sticky='w')
+
+        subject_label = Label(self.root, text=str(round(body_chance*100, 1)) + '%', fg="black")
+        subject_label.config(background="white", font=("Times New Roman", 16))
+        subject_label.grid(row=2, column=2, padx=0, sticky='w')
 
         bod_res = Text(self.root, fg="black", height=5, width=60, wrap=WORD)
         bod_res.config(background="white", font=("Times New Roman", 16))
         bod_res.grid(row=3, column=0, columnspan=5)
 
         if len(subject_threats) == 0:
-            sub_res.insert(END, "There were no words in your subject line that are commonly found in phishing scams. "
+            sub_res.insert(END, "There were no words in your subject line that we commonly found in phishing scams. "
                                 "This does not guarantee that it is not a phishing email. Please see the \"Resources\" "
                                 "for additional materials to assist in identifying threats")
         else:
             sub_res.insert(END, "There were one or more words found in your subject line that are commonly found in "
                                 "phishing emails:\n\n" + ''.join([word + '\n'for word in subject_threats]))
         if len(body_threats) == 0:
-            bod_res.insert(END, "There were no words in your email body that are commonly found in phishing scams. "
+            bod_res.insert(END, "There were no words in your email body that we commonly found in phishing scams. "
                                 "This does not guarantee that it is not a phishing email. Please see the \"Resources\" "
                                 "for additional materials to assist in identifying threats")
         else:
@@ -144,41 +213,6 @@ class GUI:
 
     def exit(self):
         self.root.destroy()
-
-    def main_menu(self):
-        self.clear()
-        # DROP DOWN MENUS
-        menu = Menu(self.root)
-        self.root.config(menu=menu)
-
-        sub_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="File", menu=sub_menu)
-        sub_menu.add_command(label="Main Menu", command=lambda: self.main_menu())
-        sub_menu.add_command(label="Exit", command=lambda: exit(self.root))
-
-        edit_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="Edit", menu=edit_menu)
-        edit_menu.add_command(label="Copy", command=lambda: self.root.focus_get().event_generate('<<Copy>>'))
-        edit_menu.add_command(label="Cut", command=lambda: self.root.focus_get().event_generate('<<Cut>>'))
-        edit_menu.add_command(label="Paste", command=lambda: self.root.focus_get().event_generate('<<Paste>>'))
-
-        help_menu = Menu(menu, tearoff=False)
-        menu.add_cascade(label="Help", menu=help_menu)
-        help_menu.add_command(label="References", command=lambda: self.reference_list())
-
-        # Main Screen with a choice between a reference list or the email checker
-        title = Label(self.root, text="PhishHook", fg="white")
-        title.config(background="gray", font=("Times New Roman", 64))
-        title.grid(row=0, column=2)
-
-        check_email = Button(self.root, text="Checker", fg="white", command=lambda: self.detection_page())
-        check_email.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-
-        references = Button(self.root, text="References", fg="white", command=lambda: self.reference_list())
-        references.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-
-        check_email.grid(row=3, column=1, pady=10)
-        references.grid(row=3, column=3, pady=10)
 
 
 def main():

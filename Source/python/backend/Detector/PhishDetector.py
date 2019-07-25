@@ -53,7 +53,14 @@ class ThreatDetector:
         z_score_body = (self.body_threats_per_word - self.p_avg_body_threats_per_word) / self.p_stddev_body_threats_per_word
         subject_percent = st.norm.cdf(z_score_subject)
         body_percent = st.norm.cdf(z_score_body)
-        return subject_percent, body_percent
+        if self.body_threats_per_word > 0 and self.subject_threats_per_word > 0:
+            return subject_percent, body_percent
+        elif self.body_threats_per_word == 0 and self.subject_threats_per_word == 0:
+            return 0, 0
+        elif self.body_threats_per_word == 0:
+            return subject_percent, 0
+        elif self.subject_threats_per_word == 0:
+            return 0, body_percent
 
 def main():
     sub_file = 'subject_threat_words.txt'

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fb65f4b-46f8-488c-8758-b34628e442b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/GetWordStatistics_body.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/GetWordStatistics_subject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/python/frontend/GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source/python/frontend/GUI.py" afterDir="false" />
     </list>
@@ -35,29 +32,31 @@
           <entry key="cfg" value="2" />
           <entry key="json" value="4" />
           <entry key="mbox" value="6" />
-          <entry key="py" value="68" />
+          <entry key="png" value="2" />
+          <entry key="py" value="69" />
           <entry key="txt" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Image" value="2" />
           <entry key="JSON" value="4" />
           <entry key="PLAIN_TEXT" value="48" />
-          <entry key="Python" value="68" />
+          <entry key="Python" value="69" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="149" />
           <entry key="dummy" value="26" />
-          <entry key="py" value="8617" />
+          <entry key="py" value="9909" />
           <entry key="txt" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="31" />
-          <entry key="Python" value="8766" />
+          <entry key="Python" value="10058" />
         </counts>
       </usages-collector>
     </session>
@@ -70,11 +69,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+            <state relative-caret-position="316">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1564080530689" expanded="true" signature="69:2794" ph="..." />
+                <marker date="1564081169216" expanded="true" signature="69:3156" ph="..." />
               </folding>
             </state>
           </provider>
@@ -83,11 +82,27 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-459">
-              <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+            <state relative-caret-position="196">
+              <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <marker date="1564077097463" expanded="true" signature="3230:6440" ph="..." />
+                <element signature="e#615#785#0" />
+                <element signature="e#848#1474#0" />
+                <element signature="e#1524#3843#0" />
+                <element signature="e#1524#1598#0" />
+                <element signature="e#3908#4355#0" />
+                <element signature="e#4459#8103#0" />
+                <element signature="e#5838#6157#0" />
+                <element signature="e#5858#6156#0" />
+                <element signature="e#6184#6397#0" />
+                <element signature="e#6204#6344#0" />
+                <element signature="e#6445#6762#0" />
+                <element signature="e#6465#6761#0" />
+                <element signature="e#6789#6997#0" />
+                <element signature="e#6809#6947#0" />
+                <element signature="e#7009#7067#0" />
+                <element signature="e#8143#8836#0" />
+                <element signature="e#8866#8885#0" />
+                <element signature="e#10812#10867#0" />
               </folding>
             </state>
           </provider>
@@ -129,10 +144,10 @@
         <option value="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/body_classifier.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/PhishDetector.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/Detector/subject_threat_words.txt" />
-        <option value="$PROJECT_DIR$/Source/python/frontend/GUI.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/SubjectLineClassification/GetWordStatistics.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/EmailBodyClassification/GetWordStatistics_body.py" />
         <option value="$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py" />
+        <option value="$PROJECT_DIR$/Source/python/frontend/GUI.py" />
       </list>
     </option>
   </component>
@@ -258,7 +273,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GetWordStatistics_body">
+  <component name="RunManager" selected="Python.GUI">
     <configuration name="GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Phishing-Email-Project-2019" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -267,7 +282,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Source/python/frontend" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Source" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -373,9 +388,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.GetWordStatistics_body" />
         <item itemvalue="Python.GetWordStatistics" />
-        <item itemvalue="Python.GUI" />
         <item itemvalue="Python.PhishDetector" />
         <item itemvalue="Python.body_classifier" />
       </list>
@@ -398,12 +413,12 @@
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.18968935" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992272" visible="true" weight="0.14210178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5007728" side_tool="true" weight="0.18968935" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32885906" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32885906" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.21744967" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39731544" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -448,6 +463,9 @@
           <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -459,6 +477,11 @@
       </expression>
     </expressions>
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>subject.winfo_width()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>safe_lengths[idx]</expression-string>
         <language-id>Python</language-id>
@@ -757,22 +780,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Source/python/backend/Detector/PhishDetector.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" column="44" selection-start-line="55" selection-start-column="44" selection-end-line="55" selection-end-column="44" />
+        <state relative-caret-position="316">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1564080530689" expanded="true" signature="69:2794" ph="..." />
+            <marker date="1564081169216" expanded="true" signature="69:3156" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Source/python/backend/PhishHook.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Source/python/frontend/GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="78" column="45" selection-start-line="78" selection-start-column="45" selection-end-line="78" selection-end-column="45" />
+        <state relative-caret-position="196">
+          <caret line="70" column="54" selection-start-line="70" selection-start-column="54" selection-end-line="70" selection-end-column="54" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1564077097463" expanded="true" signature="3230:6440" ph="..." />
+            <element signature="e#615#785#0" />
+            <element signature="e#848#1474#0" />
+            <element signature="e#1524#3843#0" />
+            <element signature="e#1524#1598#0" />
+            <element signature="e#3908#4355#0" />
+            <element signature="e#4459#8103#0" />
+            <element signature="e#5838#6157#0" />
+            <element signature="e#5858#6156#0" />
+            <element signature="e#6184#6397#0" />
+            <element signature="e#6204#6344#0" />
+            <element signature="e#6445#6762#0" />
+            <element signature="e#6465#6761#0" />
+            <element signature="e#6789#6997#0" />
+            <element signature="e#6809#6947#0" />
+            <element signature="e#7009#7067#0" />
+            <element signature="e#8143#8836#0" />
+            <element signature="e#8866#8885#0" />
+            <element signature="e#10812#10867#0" />
           </folding>
         </state>
       </provider>
