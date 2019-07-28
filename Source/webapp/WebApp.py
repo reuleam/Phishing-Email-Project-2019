@@ -12,11 +12,18 @@ def index_post():
     subject_content = request.form['subject']
     body_content = request.form["body"]
 
+    if (len(body_content)==0 or len(subject_content)==0):
+        return render_template('index.html')
+        
     detector = ThreatDetector()
     detector.detect_subject(subject_content)
     detector.detect_body(body_content)
     subject_threats, body_threats = detector.return_threats()
     subject_chance, body_chance = detector.return_stats()
+    sub_threat_words = ""
+    bod_threat_words = ""
+    sub_rating = "Subject Threat Rating: " + str(round(subject_chance*100, 1)) + "%"
+    bod_rating = "Body Threat Rating: " + str(round(body_chance*100, 1)) + "%"
 
     if len(subject_threats) == 0:
         sub_return = """There were no words in your subject line that we commonly found in phishing scams. 
@@ -35,7 +42,7 @@ def index_post():
                         phishing emails:""" 
         bod_threat_words = ','.join([word + '\n'for word in body_threats])
 
-    return render_template('output.html',sub_return=sub_return, sub_threat_words=sub_threat_words, bod_threat_words= bod_threat_words, bod_return=bod_return)
+    return render_template('output.html',sub_rating=sub_rating, sub_return=sub_return, sub_threat_words=sub_threat_words, bod_rating=bod_rating, bod_threat_words=bod_threat_words, bod_return=bod_return)
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
