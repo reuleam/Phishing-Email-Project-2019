@@ -10,7 +10,6 @@ body, html {
 }
 
 p {
-  height:100%;
   font-size: 20px;
 }
 /*-----------------------------------------*/
@@ -86,13 +85,12 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 90px 110px 90px 110px;
 }
 
 .phish-pic {
-  width: 296px;
+  width: 250px;
 }
 
 .phish-pic img {
@@ -100,10 +98,10 @@ button:hover {
 }
 
 .phish-form {
-  width: 1000px;
+  width: 650px;
 }
 
-.phish-form-title {
+.phish-title {
   display: block;
   font-family: sans-serif;
   font-size: 24px;
@@ -111,6 +109,7 @@ button:hover {
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;
+  width: 1000px
 }
 
 input.input1 {
@@ -188,46 +187,46 @@ textarea + .shadow-input1 {
   background: #333333;
 }
 
-@media (max-width: 1200px) {  
-    .phish-pic {
-      width: 33.5%;
-    }
-
-    .phish-form {
-      width: 100%;
-    }
+@media (max-width: 1200px) {
+  .phish-pic {
+    width: 33.5%;
   }
 
-  @media (max-width: 992px) {
-    .container-phish {
-      padding: 90px 80px 88px 90px;
-    }
-    
-    .phish-pic {
-      width: 35%;
-    }
+  .phish-form {
+    width: 60%;
+  }
+}
 
-    .phish-form {
-      width: 100%;
-    }
+@media (max-width: 992px) {
+  .container-phish {
+    padding: 90px 80px 88px 90px;
+  }
+  
+  .phish-pic {
+    width: 40%;
   }
 
-  @media (max-width: 768px) {
-    .container-phish {
-      padding: 90px 80px 88px 80px;
-    }
+  .phish-form {
+    width: 55%;
+  }
+}
 
-    .phish-pic {
-      display: none;
-    }
+@media (max-width: 768px) {
+  .container-phish {
+    padding: 90px 80px 88px 80px;
+  }
 
-    .phish-form {
-      width: 100%;
-    }
+  .phish-pic {
+    display: none;
+  }
+
+  .phish-form {
+    width: 100%;
+  }
 }
   
-  @media (max-width: 576px) {
-    .container-phish {
-      padding: 90px 15px 88px 15px;
-    }
+@media (max-width: 576px) {
+  .container-phish {
+    padding: 90px 15px 88px 15px;
+  }
 }
