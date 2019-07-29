@@ -62,6 +62,7 @@ class GUI:
         # help_menu.add_command(label="References", command=lambda: self.reference_list())
 
         # Main Screen with a choice between a reference list or the email checker
+
         title = Label(self.root, text="PhishHook", fg="white")
         title.config(background="gray", font=("Times New Roman", 64))
 
@@ -197,24 +198,39 @@ class GUI:
     def reference_list(self):
         # Function that will create a screen filled with reference lists
         self.clear()
-        print("Ref List")
+
+        subject_label = Label(self.root, text="Additional Resources", fg="white")
+        subject_label.config(background="gray", font=("Times New Roman", 28, 'bold'))
 
         sub_res = Text(self.root, fg="black", wrap=WORD)
         sub_res.config(background="snow2", font=("Times New Roman", 16))
 
-        sub_res.insert(END, "There were no words in your subject line that we commonly found in phishing scams. "
-                            "This does not guarantee that it is not a phishing email. Please see the \"Resources\" "
-                            "for additional materials to assist in identifying threats")
+        sub_res.insert(END, "WEBROOT Tips for spotting a phishing scam:\n"
+                            "https://www.webroot.com/us/en/resources/tips-articles/what-is-phishing\n\n")
+        sub_res.insert(END, "SANS Tips for spotting phishing scams:\n"
+                            "https://www.sans.org/security-awareness-training/resources/stop-phish\n\n")
+        sub_res.insert(END, "What to do if you fell for a phishing scam:\n"
+                            "http://mentalfloss.com/article/503105/7-steps-take-now-if-youre-victim-phishing-scheme\n\n")
 
-        # Creates a button for any exit feature
-        exit_button = Button(self.root, text="Exit", fg="black", command=lambda: exit(self.root))
-        exit_button.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-        exit_button.grid(row=2, column=2)
+        scroll_sub = Scrollbar(self.root, orient='vertical', command=sub_res.yview)
 
         # Creates a button for to return to main menu
-        main_screen = Button(self.root, text="Main Menu", fg="black", command=lambda: self.main_menu())
+
+        main_screen = Button(self.root, text="Main Menu", fg="white", command=lambda: self.main_menu())
         main_screen.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
-        main_screen.grid(row=2, column=0)
+
+        # Creates a button for any exit feature
+        exit_button = Button(self.root, text="Exit", fg="white", command=lambda: exit(self.root))
+        exit_button.config(height=2, width=10, background='grey', font=("Times New Roman", 18))
+
+        self.weight_grid([1, 50, 1, 50, 1], [1, 1, 1, 1, 1])
+
+        # self.txt['yscrollcommand'] = scrollb.set
+        subject_label.grid(row=0, column=0, columnspan=3, padx=(20, 10), pady=(20, 20), sticky='w')
+        sub_res.grid(row=1, column=1, columnspan=3, padx=(30, 30), sticky=N + E + S + W)
+        scroll_sub.grid(row=1, column=1, sticky='w')
+        main_screen.grid(row=4, column=1, padx=20, pady=20)
+        exit_button.grid(row=4, column=3, padx=20, pady=20)
 
     def exit(self):
         self.root.destroy()
