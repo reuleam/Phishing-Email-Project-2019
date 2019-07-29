@@ -4,14 +4,18 @@
     <title>Phishing Detector</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/PhishHook.png') }}"/>
 </head>
 <body>
     <div class="phish">
         <div class="container-phish">
-            <form class="phish-form validate-form" method="POST">
-                <span class="phish-form-title">
-                Phishing Email Detector
-                </span>
+            <p class="phish-title">
+                <b>Phishing Email Detector</b>
+            </p>
+            <div class="phish-pic">
+                <img src="{{ url_for('static', filename='images/PhishHook.png') }}" alt="IMG">
+            </div>
+            <form class="phish-form" method="POST">
                 <div class="wrap-input1 validate-input" data-validate="Subject is required">
                     <input class="input1" type="text" name="subject" placeholder="Subject">
                     <span class="shadow-input1"></span>

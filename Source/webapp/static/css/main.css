@@ -9,6 +9,9 @@ body, html {
   font-family: sans-serif;
 }
 
+p {
+  font-size: 20px;
+}
 /*-----------------------------------------*/
 input {
   outline: none;
@@ -82,16 +85,23 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 90px 110px 90px 110px;
+}
+
+.phish-pic {
+  width: 250px;
+}
+
+.phish-pic img {
+  max-width: 100%;
 }
 
 .phish-form {
-  width: 1000px;
+  width: 650px;
 }
 
-.phish-form-title {
+.phish-title {
   display: block;
   font-family: sans-serif;
   font-size: 24px;
@@ -99,6 +109,7 @@ button:hover {
   line-height: 1.2;
   text-align: center;
   padding-bottom: 44px;
+  width: 1000px
 }
 
 input.input1 {
@@ -136,24 +147,6 @@ textarea + .shadow-input1 {
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
-}
-
-.shadow-input1 {
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: rgba(87,184,70, 0.5);
-}
-
-.input1:focus + .shadow-input1 {
-  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
-  animation: anim-shadow 0.5s ease-in-out forwards;
 }
 
 .container-btn {
@@ -194,98 +187,46 @@ textarea + .shadow-input1 {
   background: #333333;
 }
 
-@media (max-width: 1200px) {  
-    .phish-form {
-      width: 100%;
-    }
+@media (max-width: 1200px) {
+  .phish-pic {
+    width: 33.5%;
   }
 
-  @media (max-width: 992px) {
-    .container-phish {
-      padding: 90px 80px 88px 90px;
-    }
-    
-    .phish-form {
-      width: 100%;
-    }
+  .phish-form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-phish {
+    padding: 90px 80px 88px 90px;
+  }
+  
+  .phish-pic {
+    width: 40%;
   }
 
-  @media (max-width: 768px) {
-    .container-phish {
-      padding: 90px 80px 88px 80px;
-    }
+  .phish-form {
+    width: 55%;
+  }
+}
 
-    .phish-form {
-      width: 100%;
-    }
+@media (max-width: 768px) {
+  .container-phish {
+    padding: 90px 80px 88px 80px;
+  }
+
+  .phish-pic {
+    display: none;
+  }
+
+  .phish-form {
+    width: 100%;
+  }
 }
   
-  @media (max-width: 576px) {
-    .container-phish {
-      padding: 90px 15px 88px 15px;
-    }
-}
-
-
-.validate-input {
-  position: relative;
-}
-  
-.alert-validate::before {
-  content: attr(data-validate);
-  position: absolute;
-  max-width: 70%;
-  background-color: white;
-  border: 1px solid #c80000;
-  border-radius: 13px;
-  padding: 4px 25px 4px 10px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 8px;
-  pointer-events: none;
-
-  font-family: Georgia;
-  color: #c80000;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-
-  visibility: hidden;
-  opacity: 0;
-
-  -webkit-transition: opacity 0.4s;
-  -o-transition: opacity 0.4s;
-  -moz-transition: opacity 0.4s;
-  transition: opacity 0.4s;
-}
-  
-.alert-validate::after {
-  content: "\f06a";
-  display: block;
-  position: absolute;
-  color: #c80000;
-  font-size: 15px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 13px;
-}
-  
-.alert-validate:hover:before {
-  visibility: visible;
-  opacity: 1;
-}
-  
-  @media (max-width: 992px) {
-    .alert-validate::before {
-      visibility: visible;
-      opacity: 1;
-    }
+@media (max-width: 576px) {
+  .container-phish {
+    padding: 90px 15px 88px 15px;
+  }
 }
