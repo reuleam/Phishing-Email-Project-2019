@@ -1,3 +1,4 @@
+import os
 import nltk
 import scipy.stats as st
 
