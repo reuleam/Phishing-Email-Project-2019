@@ -1,5 +1,4 @@
 import nltk
-import os
 import scipy.stats as st
 
 class ThreatDetector:
