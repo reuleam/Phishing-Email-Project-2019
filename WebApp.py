@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, render_template
 from PhishDetector import ThreatDetector
 
@@ -45,4 +46,5 @@ def index_post():
     return render_template('output.html',sub_rating=sub_rating, sub_return=sub_return, sub_threat_words=sub_threat_words, bod_rating=bod_rating, bod_threat_words=bod_threat_words, bod_return=bod_return)
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
