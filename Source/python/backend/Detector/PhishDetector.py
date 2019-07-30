@@ -49,18 +49,25 @@ class ThreatDetector:
         return self.subject_threats, self.body_threats
 
     def return_stats(self):
-        z_score_subject = (self.subject_threats_per_word - self.p_avg_subject_threats_per_word) / self.p_stddev_subject_threats_per_word
-        z_score_body = (self.body_threats_per_word - self.p_avg_body_threats_per_word) / self.p_stddev_body_threats_per_word
+        z_score_subject = (self.subject_threats_per_word - self.s_avg_subject_threats_per_word) / self.s_stddev_subject_threats_per_word
+        z_score_body = (self.body_threats_per_word - self.s_avg_body_threats_per_word) / self.s_stddev_body_threats_per_word
         subject_percent = st.norm.cdf(z_score_subject)
         body_percent = st.norm.cdf(z_score_body)
+        sub_threat_percent = (subject_percent - .5) * 2
+        bod_threat_percent = (body_percent - .5) * 2
+
+        if sub_threat_percent < 0:
+            sub_threat_percent = 0
+        if bod_threat_percent < 0:
+            bod_threat_percent = 0
         if self.body_threats_per_word > 0 and self.subject_threats_per_word > 0:
-            return subject_percent, body_percent
+            return sub_threat_percent, bod_threat_percent
         elif self.body_threats_per_word == 0 and self.subject_threats_per_word == 0:
             return 0, 0
         elif self.body_threats_per_word == 0:
-            return subject_percent, 0
+            return sub_threat_percent, 0
         elif self.subject_threats_per_word == 0:
-            return 0, body_percent
+            return 0, bod_threat_percent
 
 def main():
     sub_file = 'subject_threat_words.txt'
